@@ -1,0 +1,695 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Main = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local ClickLift = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local StopFarming = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Unanchor = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Anchor = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Unanimation = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Animation = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local ToolName = Instance.new("TextBox")
+local UICorner_9 = Instance.new("UICorner")
+local Farm = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Unequip = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Equip = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Sides = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local DeleteHud = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local DeleteGraphics = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local DeleteCloud = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local AntiAfk = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local CountTool = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local DeleteRumble = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local DeleteInventory = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local TPhigh = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local Options = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_23 = Instance.new("UICorner")
+local Main_2 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local Sides_2 = Instance.new("TextButton")
+local Options_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.Position = UDim2.new(0.230870709, 0, 0.0198807158, 0)
+MainFrame.Size = UDim2.new(0, 461, 0, 479)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+UICorner.Parent = MainFrame
+
+Main.Name = "Main"
+Main.Parent = MainFrame
+Main.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Main.BorderColor3 = Color3.fromRGB(39, 39, 39)
+Main.Position = UDim2.new(0.24728851, 0, 0.00417536544, 0)
+Main.Size = UDim2.new(0, 347, 0, 479)
+
+UICorner_2.Parent = Main
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel.BorderColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel.Position = UDim2.new(0.0403458215, 0, 0.0918580443, 0)
+TextLabel.Size = UDim2.new(0, 103, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Farming"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 30.000
+
+ClickLift.Name = "Click Lift"
+ClickLift.Parent = Main
+ClickLift.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ClickLift.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClickLift.Position = UDim2.new(0.0403458215, 0, 0.217119008, 0)
+ClickLift.Size = UDim2.new(0, 117, 0, 35)
+ClickLift.Font = Enum.Font.SourceSansBold
+ClickLift.Text = "Click Lift"
+ClickLift.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClickLift.TextSize = 30.000
+ClickLift.MouseButton1Click:connect(function()
+	_G.Auto4 = true
+	while _G.Auto4 do
+		wait(5.00)
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate() end
+
+		end
+	end
+end)
+
+UICorner_3.Parent = ClickLift
+
+StopFarming.Name = "Stop Farming"
+StopFarming.Parent = Main
+StopFarming.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StopFarming.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StopFarming.Position = UDim2.new(0.210374638, 0, 0.805845439, 0)
+StopFarming.Size = UDim2.new(0, 200, 0, 35)
+StopFarming.Font = Enum.Font.SourceSansBold
+StopFarming.Text = "Stop Farming"
+StopFarming.TextColor3 = Color3.fromRGB(255, 255, 255)
+StopFarming.TextSize = 30.000
+StopFarming.MouseButton1Click:connect(function()
+	Farm.Visible = true
+	StopFarming.Visible = false
+	_G.farm = false
+end)
+
+UICorner_4.Parent = StopFarming
+
+Unanchor.Name = "Unanchor"
+Unanchor.Parent = Main
+Unanchor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Unanchor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unanchor.Position = UDim2.new(0.582132578, 0, 0.325678527, 0)
+Unanchor.Size = UDim2.new(0, 117, 0, 35)
+Unanchor.Font = Enum.Font.SourceSansBold
+Unanchor.Text = "Unanchor"
+Unanchor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unanchor.TextSize = 30.000
+Unanchor.MouseButton1Click:connect(function()
+	for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA('Part') then v.Anchored = false
+		end
+	end
+end)
+
+UICorner_5.Parent = Unanchor
+
+Anchor.Name = "Anchor"
+Anchor.Parent = Main
+Anchor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Anchor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anchor.Position = UDim2.new(0.582132578, 0, 0.215031385, 0)
+Anchor.Size = UDim2.new(0, 117, 0, 35)
+Anchor.Font = Enum.Font.SourceSansBold
+Anchor.Text = "Anchor"
+Anchor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Anchor.TextSize = 30.000
+Anchor.MouseButton1Click:connect(function()
+	for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA('Part') then v.Anchored = true
+		end
+	end
+end)
+
+UICorner_6.Parent = Anchor
+
+Unanimation.Name = "Unanimation"
+Unanimation.Parent = Main
+Unanimation.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Unanimation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unanimation.Position = UDim2.new(0.0403458215, 0, 0.436325669, 0)
+Unanimation.Size = UDim2.new(0, 117, 0, 35)
+Unanimation.Font = Enum.Font.SourceSansBold
+Unanimation.Text = "Unanimation"
+Unanimation.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unanimation.TextSize = 20.000
+Unanimation.MouseButton1Click:connect(function()
+	for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA('MeshPart') then v.Anchored = false
+		end
+	end
+end)
+
+UICorner_7.Parent = Unanimation
+
+Animation.Name = "Animation"
+Animation.Parent = Main
+Animation.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Animation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Animation.Position = UDim2.new(0.0403458215, 0, 0.32776615, 0)
+Animation.Size = UDim2.new(0, 117, 0, 35)
+Animation.Font = Enum.Font.SourceSansBold
+Animation.Text = "Animation"
+Animation.TextColor3 = Color3.fromRGB(255, 255, 255)
+Animation.TextSize = 30.000
+Animation.MouseButton1Click:connect(function()
+	for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA('MeshPart') then v.Anchored = true
+		end
+	end
+end)
+
+UICorner_8.Parent = Animation
+
+ToolName.Name = "ToolName"
+ToolName.Parent = Main
+ToolName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToolName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToolName.Position = UDim2.new(0.210374638, 0, 0.567849696, 0)
+ToolName.Size = UDim2.new(0, 200, 0, 50)
+ToolName.Font = Enum.Font.SourceSansBold
+ToolName.Text = "ToolName"
+ToolName.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToolName.TextSize = 30.000
+
+UICorner_9.Parent = ToolName
+
+Farm.Name = "Farm"
+Farm.Parent = Main
+Farm.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Farm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Farm.Position = UDim2.new(0.210374653, 0, 0.803757846, 0)
+Farm.Size = UDim2.new(0, 200, 0, 35)
+Farm.Font = Enum.Font.SourceSansBold
+Farm.Text = "Farm"
+Farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Farm.TextSize = 30.000
+Farm.MouseButton1Click:connect(function()
+	StopFarming.Visible = true
+	Farm.Visible = false
+	_G.farm = true
+	while _G.farm do
+		wait()
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == ToolName.Text then v:Activate() end
+		end
+	end
+end)
+
+UICorner_10.Parent = Farm
+
+Unequip.Name = "Unequip"
+Unequip.Parent = Main
+Unequip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Unequip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unequip.Position = UDim2.new(0.210374653, 0, 0.699373722, 0)
+Unequip.Size = UDim2.new(0, 200, 0, 35)
+Unequip.Font = Enum.Font.SourceSansBold
+Unequip.Text = "Unequip"
+Unequip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unequip.TextSize = 30.000
+Unequip.MouseButton1Click:connect(function()
+	Equip.Visible = true
+	Unequip.Visible = false
+	_G.equip = false
+end)
+
+UICorner_11.Parent = Unequip
+
+Equip.Name = "Equip"
+Equip.Parent = Main
+Equip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Equip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Equip.Position = UDim2.new(0.210374653, 0, 0.699373722, 0)
+Equip.Size = UDim2.new(0, 200, 0, 35)
+Equip.Font = Enum.Font.SourceSansBold
+Equip.Text = "Equip"
+Equip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Equip.TextSize = 30.000
+Equip.MouseButton1Click:connect(function()
+	Unequip.Visible = true
+	Equip.Visible = false
+	_G.equip = true
+	while _G.equip do
+		wait()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == ToolName.Text then
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+end)
+
+UICorner_12.Parent = Equip
+
+Sides.Name = "Sides"
+Sides.Parent = MainFrame
+Sides.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Sides.BorderColor3 = Color3.fromRGB(39, 39, 39)
+Sides.Position = UDim2.new(0.24728851, 0, 0, 0)
+Sides.Size = UDim2.new(0, 347, 0, 479)
+Sides.Visible = false
+
+UICorner_13.Parent = Sides
+
+TextLabel_2.Parent = Sides
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_2.BorderColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_2.Position = UDim2.new(0.0403458215, 0, 0.118997917, 0)
+TextLabel_2.Size = UDim2.new(0, 127, 0, 28)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Add on"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 30.000
+
+DeleteHud.Name = "Delete Hud"
+DeleteHud.Parent = Sides
+DeleteHud.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DeleteHud.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteHud.Position = UDim2.new(0.164265126, 0, 0.200417534, 0)
+DeleteHud.Size = UDim2.new(0, 200, 0, 35)
+DeleteHud.Font = Enum.Font.SourceSansBold
+DeleteHud.Text = "Delete Hud"
+DeleteHud.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteHud.TextSize = 30.000
+DeleteHud.MouseButton1Click:connect(function()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ProteinBuy:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenShop:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenReb:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ImageLabel:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenPack:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.PopSound:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.BlackMarket:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.LiftRemind:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.MuscleGain:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.RebFrame:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ShopFrame:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenSkins:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.Bar:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.StrengthHolder.ImageLabel:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.StrengthHolder.TextLabel.TextLabel:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.CashHolder:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.CashButton:Destroy()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.RumbleHolder:Destroy()
+end)
+
+UICorner_14.Parent = DeleteHud
+
+DeleteGraphics.Name = "Delete Graphics"
+DeleteGraphics.Parent = Sides
+DeleteGraphics.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DeleteGraphics.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteGraphics.Position = UDim2.new(0.164265156, 0, 0.29436326, 0)
+DeleteGraphics.Size = UDim2.new(0, 200, 0, 35)
+DeleteGraphics.Font = Enum.Font.SourceSansBold
+DeleteGraphics.Text = "Delete Graphics"
+DeleteGraphics.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteGraphics.TextSize = 30.000
+DeleteGraphics.MouseButton1Click:connect(function()
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i,v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") and decalsyeeted then 
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then 
+			v.Lifetime = NumberRange.new(0)
+		end
+	end
+end)
+
+UICorner_15.Parent = DeleteGraphics
+
+DeleteCloud.Name = "Delete Cloud"
+DeleteCloud.Parent = Sides
+DeleteCloud.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DeleteCloud.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteCloud.Position = UDim2.new(0.164265156, 0, 0.379958242, 0)
+DeleteCloud.Size = UDim2.new(0, 200, 0, 35)
+DeleteCloud.Font = Enum.Font.SourceSansBold
+DeleteCloud.Text = "Delete Cloud"
+DeleteCloud.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteCloud.TextSize = 30.000
+DeleteCloud.MouseButton1Click:connect(function()
+	for _,v in pairs(game.Workspace:GetChildren()) do
+		if v:IsA("Folder") then
+			if v.Name ~= "Camera" then
+				v:Destroy()
+			end
+		end
+	end
+end)
+
+UICorner_16.Parent = DeleteCloud
+
+AntiAfk.Name = "Anti Afk"
+AntiAfk.Parent = Sides
+AntiAfk.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AntiAfk.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AntiAfk.Position = UDim2.new(0.164265096, 0, 0.467640907, 0)
+AntiAfk.Size = UDim2.new(0, 200, 0, 35)
+AntiAfk.Font = Enum.Font.SourceSansBold
+AntiAfk.Text = "Anti Afk"
+AntiAfk.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiAfk.TextSize = 30.000
+AntiAfk.MouseButton1Click:connect(function()
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end)
+
+UICorner_17.Parent = AntiAfk
+
+CountTool.Name = "Count Tool"
+CountTool.Parent = Sides
+CountTool.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CountTool.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CountTool.Position = UDim2.new(0.164265156, 0, 0.555323601, 0)
+CountTool.Size = UDim2.new(0, 200, 0, 35)
+CountTool.Font = Enum.Font.SourceSansBold
+CountTool.Text = "Count Tool"
+CountTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+CountTool.TextSize = 30.000
+CountTool.MouseButton1Click:connect(function()
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local UIGradient = Instance.new("UIGradient")
+	local textlabel = Instance.new("TextLabel")
+	local UICorner = Instance.new("UICorner")
+	local UIGradient_2 = Instance.new("UIGradient")
+
+	--Properties:
+
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.DisplayOrder = 999999999
+	ScreenGui.ResetOnSpawn = false
+
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Frame.BorderSizePixel = 2
+	Frame.Position = UDim2.new(0.65150404, 0, 0.508939207, 0)
+	Frame.Size = UDim2.new(0, 215, 0, 59)
+
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(69, 140, 255)), ColorSequenceKeypoint.new(0.34, Color3.fromRGB(35, 28, 255)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(109, 65, 255)), ColorSequenceKeypoint.new(0.79, Color3.fromRGB(29, 82, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(69, 140, 255))}
+	UIGradient.Parent = Frame
+
+	textlabel.Name = "textlabel"
+	textlabel.Parent = Frame
+	textlabel.Active = true
+	textlabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	textlabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	textlabel.Size = UDim2.new(0, 215, 0, 58)
+	textlabel.Font = Enum.Font.SourceSans
+	textlabel.Text = "0 Dw"
+	textlabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	textlabel.TextSize = 23.000
+	textlabel.TextWrapped = true
+
+	UICorner.CornerRadius = UDim.new(0, 10)
+	UICorner.Parent = textlabel
+
+	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(69, 140, 255)), ColorSequenceKeypoint.new(0.34, Color3.fromRGB(35, 28, 255)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(109, 65, 255)), ColorSequenceKeypoint.new(0.79, Color3.fromRGB(29, 82, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(69, 140, 255))}
+	UIGradient_2.Parent = textlabel
+
+	-- Scripts:
+
+	local function XVYMLY_fake_script() -- ScreenGui.LocalScript 
+		local script = Instance.new('LocalScript', ScreenGui)
+
+		frame = script.Parent.Frame
+		frame.Draggable = true
+		frame.Active = true
+		frame.Selectable = true
+	end
+	coroutine.wrap(XVYMLY_fake_script)()
+
+	repeat
+		wait(.1)
+		local num = 0
+		for i,v in pairs(game:GetService("CoreGui").RobloxGui.Backpack.Inventory.ScrollingFrame.UIGridFrame:GetChildren()) do
+			if v:IsA("TextButton") then
+				num += 1
+			end
+		end
+		textlabel.Text = num.."DW"
+	until num == 9999999999999
+end)
+
+UICorner_18.Parent = CountTool
+
+DeleteRumble.Name = "Delete Rumble"
+DeleteRumble.Parent = Sides
+DeleteRumble.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DeleteRumble.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteRumble.Position = UDim2.new(0.164265156, 0, 0.640918612, 0)
+DeleteRumble.Size = UDim2.new(0, 200, 0, 35)
+DeleteRumble.Font = Enum.Font.SourceSansBold
+DeleteRumble.Text = "Delete Rumble"
+DeleteRumble.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteRumble.TextSize = 30.000
+DeleteRumble.MouseButton1Click:connect(function()
+	game.ReplicatedFirst.TourneyQ:Destroy()
+end)
+
+UICorner_19.Parent = DeleteRumble
+
+DeleteInventory.Name = "Delete Inventory"
+DeleteInventory.Parent = Sides
+DeleteInventory.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DeleteInventory.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteInventory.Position = UDim2.new(0.164265156, 0, 0.728601217, 0)
+DeleteInventory.Size = UDim2.new(0, 200, 0, 35)
+DeleteInventory.Font = Enum.Font.SourceSansBold
+DeleteInventory.Text = "Delete Inventory"
+DeleteInventory.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteInventory.TextSize = 30.000
+DeleteInventory.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/8W1draqT", true))()
+end)
+
+UICorner_20.Parent = DeleteInventory
+
+TPhigh.Name = "TP high"
+TPhigh.Parent = Sides
+TPhigh.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TPhigh.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPhigh.Position = UDim2.new(0.164265156, 0, 0.816283941, 0)
+TPhigh.Size = UDim2.new(0, 200, 0, 35)
+TPhigh.Font = Enum.Font.SourceSansBold
+TPhigh.Text = "TP high"
+TPhigh.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPhigh.TextSize = 30.000
+TPhigh.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 22000, -1000)
+	baseplatee = Instance.new("Part", workspace)
+	baseplatee.Size = Vector3.new(1000, 1, 1000)
+	baseplatee.CFrame = game.workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame + Vector3.new(0,-2, 0)
+	baseplatee.Anchored = true
+end)
+
+UICorner_21.Parent = TPhigh
+
+Options.Name = "Options"
+Options.Parent = MainFrame
+Options.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Options.BorderColor3 = Color3.fromRGB(39, 39, 39)
+Options.Position = UDim2.new(0.24728851, 0, 0, 0)
+Options.Size = UDim2.new(0, 347, 0, 479)
+Options.Visible = false
+
+UICorner_22.Parent = Options
+
+TextLabel_3.Parent = Options
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_3.BorderColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_3.Position = UDim2.new(0.132564843, 0, 0.183716074, 0)
+TextLabel_3.Size = UDim2.new(0, 254, 0, 70)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Created by Fluzas#4940 and REALIFTER#0615"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 20.000
+
+TextLabel_4.Parent = Options
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_4.BorderColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel_4.Position = UDim2.new(0.0403458215, 0, 0.306889355, 0)
+TextLabel_4.Size = UDim2.new(0, 324, 0, 50)
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "Press X to Hide and Press E to open"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 25.000
+
+TextLabel_5.Parent = MainFrame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 461, 0, 44)
+TextLabel_5.Font = Enum.Font.SourceSansBold
+TextLabel_5.Text = "Fluzas and REALIFTER"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 30.000
+
+UICorner_23.Parent = TextLabel_5
+
+Main_2.Name = "Main"
+Main_2.Parent = MainFrame
+Main_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main_2.Position = UDim2.new(0.0173535794, 0, 0.141962424, 0)
+Main_2.Size = UDim2.new(0, 83, 0, 50)
+Main_2.Font = Enum.Font.SourceSansBold
+Main_2.Text = "Main"
+Main_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.TextSize = 30.000
+
+UICorner_24.Parent = Main_2
+
+Sides_2.Name = "Sides"
+Sides_2.Parent = MainFrame
+Sides_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sides_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sides_2.Position = UDim2.new(0.0173535794, 0, 0.246346548, 0)
+Sides_2.Size = UDim2.new(0, 83, 0, 50)
+Sides_2.Font = Enum.Font.SourceSansBold
+Sides_2.Text = "Sides"
+Sides_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sides_2.TextSize = 30.000
+
+Options_2.Name = "Options"
+Options_2.Parent = MainFrame
+Options_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Options_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Options_2.Position = UDim2.new(0.0173535794, 0, 0.350730687, 0)
+Options_2.Size = UDim2.new(0, 83, 0, 50)
+Options_2.Font = Enum.Font.SourceSansBold
+Options_2.Text = "Options"
+Options_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Options_2.TextSize = 30.000
+
+-- Scripts:
+
+local function OEPSARB_fake_script() -- Main_2.LocalScript 
+	local script = Instance.new('LocalScript', Main_2)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Main.Visible = true
+		script.Parent.Parent.Sides.Visible = false
+		script.Parent.Parent.Options.Visible = false
+		wait(0.1)
+	end)
+	
+end
+coroutine.wrap(OEPSARB_fake_script)()
+local function AILQSD_fake_script() -- Sides_2.LocalScript 
+	local script = Instance.new('LocalScript', Sides_2)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.Sides.Visible = true
+		script.Parent.Parent.Options.Visible = false
+		wait(0.1)
+	end)
+	
+end
+coroutine.wrap(AILQSD_fake_script)()
+local function BJSD_fake_script() -- Options_2.LocalScript 
+	local script = Instance.new('LocalScript', Options_2)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.Sides.Visible = false
+		script.Parent.Parent.Options.Visible = true
+		wait(0.1)
+	end)
+	
+end
+coroutine.wrap(BJSD_fake_script)()
+local function GCVJOSF_fake_script() -- MainFrame.LocalScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "e" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "x" then
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(GCVJOSF_fake_script)()
